@@ -30,13 +30,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between .forEach and .map is that .map returns a new array automatically based on whether or not each array element meets the criteria of a function passed through .map while .forEach also has a callback function passed through it does not return a new array, but will mutate the original array unless steps are taken to make sure it does not.  Another difference worth noting is that .forEach returns automatically, while .map does not.
+
 2. What is the difference between a function and a method?
+
+The main difference between a function and a method is that a method is a function housed within an Object Literal or a Class.  A method is a type of function.
 
 3. What is closure?
 
+Closure occurs when a function is invoked and reaches outside it's own context or scope to reference some sort of variable in the code outside of the function - this code may be in the global scope or in the scope of a parent function.  It's important to note that a function can never reach into a nested function's scope to reference a variable contained within that nested function. This paradigm remains true no matter how deep you nest functions.  A nested grandchild function can still reach outside itself and access variables assigned in it's grandparent function.  
+
 4. Describe the four rules of the 'this' keyword.
 
+The four rules of the ‘this’ keyword are directly related to it’s context and what ‘this’ is bound to or binding.  Within window (or global) context the ‘this’ keyword refers to the window or the global scope, also known as Window Binding, and in that context using ‘this’ is not useful. 
+
+In Explicit Binding the ‘this’ keyword is used with dot notation and when the function containing ‘this’ is invoked (also using dot notation), ‘this’ refers to whatever object is left of the dot.
+
+In New Binding the ‘this’ keyword is used within a constructor function and the ‘new’ keyword is used to create objects which refer back to the constructor function where properties are defined using the 'this' keyword, for example this.name = properties.name, and it’s properties and methods.  Within New Binding the ‘this’ keyword will refer to whatever object(and it's properties) is to the left of the dot, when any property or method is called for the objects created by the 'new' keyword with reference to the constructor function (or class).
+
+Explicit binding occurs when the .call, .apply, or .bind methods are used.  It is called Explicit binding becasue the method will directly indicate what 'this' is supposed to reference as a paramater of the method.
+
 5. Why do we need super() in an extended class?
+
+In combination with extending the class, super() will ensure the child class inherits the properties of the parent class being extended.
 
 ## Project Set up
 
