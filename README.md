@@ -30,13 +30,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between .forEach and .map is that .map returns a new array automatically based on whether or not each array element meets the criteria of a function passed through .map while .forEach also has a callback function passed through it does not return a new array, but will mutate the original array unless steps are taken to make sure it does not.  Another difference worth noting is that .forEach returns automatically, while .map does not.
+
 2. What is the difference between a function and a method?
+
+The main difference between a function and a method is that a method is a function housed within an Object Literal or a Class.  A method is a type of function.
 
 3. What is closure?
 
+...
+
 4. Describe the four rules of the 'this' keyword.
 
+The four rules of the ‘this’ keyword are directly related to it’s context and what ‘this’ is bound to or binding.  Within window (or global) context the ‘this’ keyword refers to the window or the global scope, also known as Window Binding, and in that context using ‘this’ is not useful. 
+
+In Explicit Binding the ‘this’ keyword is used with dot notation and when the function containing ‘this’ is invoked (also using dot notation), ‘this’ refers to whatever object is left of the dot.
+
+In New Binding the ‘this’ keyword is used within a constructor function and the ‘new’ keyword is used to create objects which refer back to the constructor function and it’s properties and methods.  Within New Binding the ‘this’ keyword will refer to whatever . . .     
+
 5. Why do we need super() in an extended class?
+
+In combination with extending the class, super() will ensure the child class inherits the properties of the parent class being extended.
 
 ## Project Set up
 
